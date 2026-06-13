@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorry Kaileigh</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.4);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 500px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    /* Floating hearts */
+    .floating-hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .heart-float {
+      position: absolute;
+      bottom: -50px;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      animation: rise 6s linear infinite;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC (YouTube) -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/rkq6y0r7R5Y?autoplay=1&loop=1&playlist=rkq6y0r7R5Y"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<!-- FLOATING HEARTS -->
+<div class="floating-hearts">
+  <div class="heart-float" style="left:10%">💔</div>
+  <div class="heart-float" style="left:25%; animation-delay:1s">❤️</div>
+  <div class="heart-float" style="left:40%; animation-delay:2s">💔</div>
+  <div class="heart-float" style="left:60%; animation-delay:3s">❤️</div>
+  <div class="heart-float" style="left:80%; animation-delay:4s">💔</div>
+</div>
+
+<div class="box">
+  <div class="heart">💔</div>
+  <h1>Sorry Kaileigh</h1>
+
+  <p>
+    Maraming beses akong nagkamali...<br>
+    Nagso-sorry ako sa lahat ng nagawa ko.<br>
+    Nanghihingi ako ng forgiveness sayo.<br>
+    Ayokong mawala ka sa buhay ko.<br>
+    Mahal na mahal kita.
+  </p>
+</div>
+
+</body>
+  </html>
