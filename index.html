@@ -20,16 +20,14 @@
     }
 
     .box {
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
       padding: 25px;
       border-radius: 15px;
       max-width: 500px;
       z-index: 2;
     }
 
-    h1 {
-      font-size: 40px;
-    }
+    h1 { font-size: 38px; }
 
     p {
       font-size: 18px;
@@ -47,69 +45,74 @@
       100% { transform: scale(1); }
     }
 
-    /* Floating hearts */
-    .floating-hearts {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: 1;
-    }
-
+    /* floating hearts */
     .heart-float {
       position: absolute;
       bottom: -50px;
-      color: rgba(255,255,255,0.7);
       font-size: 20px;
       animation: rise 6s linear infinite;
+      opacity: 0.7;
     }
 
     @keyframes rise {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
     }
 
+    /* button */
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background: white;
+      color: #ee9ca7;
+      font-weight: bold;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
   </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND MUSIC (YouTube) -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/rkq6y0r7R5Y?autoplay=1&loop=1&playlist=rkq6y0r7R5Y"
-frameborder="0"
-allow="autoplay">
-</iframe>
+<!-- MUSIC (Green Day - Last Night on Earth vibe) -->
+<audio id="bgmusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+</audio>
 
-<!-- FLOATING HEARTS -->
-<div class="floating-hearts">
-  <div class="heart-float" style="left:10%">💔</div>
-  <div class="heart-float" style="left:25%; animation-delay:1s">❤️</div>
-  <div class="heart-float" style="left:40%; animation-delay:2s">💔</div>
-  <div class="heart-float" style="left:60%; animation-delay:3s">❤️</div>
-  <div class="heart-float" style="left:80%; animation-delay:4s">💔</div>
-</div>
+<!-- HEARTS -->
+<div class="heart-float" style="left:10%">💔</div>
+<div class="heart-float" style="left:25%; animation-delay:1s">❤️</div>
+<div class="heart-float" style="left:40%; animation-delay:2s">💔</div>
+<div class="heart-float" style="left:60%; animation-delay:3s">❤️</div>
+<div class="heart-float" style="left:80%; animation-delay:4s">💔</div>
 
 <div class="box">
   <div class="heart">💔</div>
   <h1>Sorry Kaileigh</h1>
 
   <p>
-    Maraming beses akong nagkamali...<br>
-    Nagso-sorry ako sa lahat ng nagawa ko.<br>
-    Nanghihingi ako ng forgiveness sayo.<br>
+    Nagkamali ako...<br>
+    Nagso-sorry ako sincerely.<br>
+    Nanghihingi ako ng forgiveness.<br>
     Ayokong mawala ka sa buhay ko.<br>
     Mahal na mahal kita.
   </p>
+
+  <button onclick="playMusic()">▶ Click mo ako</button>
 </div>
 
+<script>
+function playMusic() {
+  document.getElementById("bgmusic").play();
+  alert("Sorry Kaileigh 💔");
+}
+</script>
+
 </body>
-  </html>
+</html>
